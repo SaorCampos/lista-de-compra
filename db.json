@@ -1,0 +1,89 @@
+{
+  "compras": [
+    {
+      "id": 1,
+      "item": "Arroz",
+      "quantidade": 5
+    },
+    {
+      "id": 2,
+      "item": "Feijão",
+      "quantidade": 2
+    },
+    {
+      "id": 3,
+      "item": "Linguiça",
+      "quantidade": 2
+    },
+    {
+      "id": 4,
+      "item": "Charque",
+      "quantidade": 1
+    },
+    {
+      "item": "ypioca",
+      "quantidade": 3,
+      "id": 5
+    },
+    {
+      "item": "eisenbahn",
+      "quantidade": 20,
+      "id": 6
+    },
+    {
+      "item": "ovos",
+      "quantidade": 20,
+      "id": 7
+    },
+    {
+      "item": "sal",
+      "quantidade": 1,
+      "id": 8
+    },
+    {
+      "item": "Banana",
+      "quantidade": "12",
+      "id": 9
+    },
+    {
+      "item": "Uva",
+      "quantidade": "5",
+      "id": 10
+    },
+    {
+      "item": "Tomate",
+      "quantidade": "3",
+      "id": 11
+    },
+    {
+      "item": "cebola",
+      "quantidade": "3",
+      "id": 12
+    },
+    {
+      "item": "frauda",
+      "quantidade": "10",
+      "id": 13
+    },
+    {
+      "item": "suco",
+      "quantidade": "2",
+      "id": 14
+    },
+    {
+      "item": "Alface",
+      "quantidade": "2",
+      "id": 15
+    },
+    {
+      "item": "acerola",
+      "quantidade": "2",
+      "id": 16
+    },
+    {
+      "item": "picanha",
+      "quantidade": "2",
+      "id": 17
+    }
+  ]
+}
