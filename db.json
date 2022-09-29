@@ -84,6 +84,11 @@
       "item": "picanha",
       "quantidade": "2",
       "id": 17
+    },
+    {
+      "item": "bacon",
+      "quantidade": "2",
+      "id": 18
     }
   ]
 }

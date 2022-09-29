@@ -15,8 +15,8 @@ function atualizarLista() {
                     <button onclick="excluir(${cadaItem.id})" class="btn btn-danger">
                         Excluir
                     </button>
-                    <button class="btn btn-warning">
-                        Editar
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarProduto">
+                        Editar Produto
                     </button>
                 </td>
             </tr>`
@@ -49,6 +49,7 @@ function criar(){
         body: JSON.stringify(produto)
     }).then((response) => response.json())
     .then((data) => {
+        alert("Produto adicionado com sucesso")
         atualizarLista();
         console.log('Success:', data);
     })
@@ -60,8 +61,8 @@ function criar(){
 function editar(id){
     event.preventDefault();
     let produto = {
-        item: document.getElementById('nome').value,
-        quantidade: document.getElementById('quantia').value,
+        item: document.getElementById('editar_produto').value,
+        quantidade: document.getElementById('editar_quantidade').value,
     }
     fetch('http://localhost:8000/compras/' +id,{
         method: 'PATCH',
@@ -77,5 +78,6 @@ function editar(id){
     .catch((error) => {
         console.error('Error:', error);
         });
+    atualizarLista();
 }
 atualizarLista();

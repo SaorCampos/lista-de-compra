@@ -32,7 +32,7 @@
     <!-- Button trigger modal -->
 
 
-<!-- Modal -->
+<!-- Modal de adição -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -44,6 +44,27 @@
         <div class="modal-body">
             <input type="text" class="form-control-lg mb-3" id="input_produto" placeholder="Nome do Produto">
             <input type="number" class="form-control-lg mb-3" id="input_quantidade" placeholder="Quantidade">
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary">Salvar alterções</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editarProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="formAdd" onsubmit="editar()" action="">
+        <div class="modal-body">
+            <input type="text" class="form-control-lg mb-3" id="editar_produto" placeholder="Nome do Produto">
+            <input type="number" class="form-control-lg mb-3" id="editar_quantidade" placeholder="Quantidade">
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
