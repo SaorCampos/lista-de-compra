@@ -15,8 +15,8 @@ function atualizarLista() {
                     <button onclick="excluir(${cadaItem.id})" class="btn btn-danger">
                         Excluir
                     </button>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarProduto">
-                        Editar Produto
+                    <button onclick="chamarProduto(${cadaItem.id})" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    Editar
                     </button>
                 </td>
             </tr>`
@@ -58,13 +58,26 @@ function criar(){
     });
     formAdd.reset()
 }
-function editar(id){
+
+function chamarProduto(id) {
+    fetch('http://localhost:8000/compras/' +id)
+    .then(function(resposta){
+        return resposta.json();
+    })
+    .then((produto) => {
+        document.getElementById("editar_id").value = produto.id;
+        editar_produto.value = produto.item;
+        editar_quantidade.value = produto.quantidade;
+    })
+};
+async function editar(){
     event.preventDefault();
+    let id = document.getElementById('editar_id').value
     let produto = {
         item: document.getElementById('editar_produto').value,
         quantidade: document.getElementById('editar_quantidade').value,
     }
-    fetch('http://localhost:8000/compras/' +id,{
+    await fetch('http://localhost:8000/compras/' +id,{
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',
