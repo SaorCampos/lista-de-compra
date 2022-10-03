@@ -67,7 +67,7 @@ function editar(id){
     fetch('http://localhost:8000/compras/' +id,{
         method: 'PATCH',
         headers: {
-            'Content-type': 'application/json',
+            'Content-type': 'application/json; charset=UTF-8',
         },
         body: JSON.stringify(produto)
     }).then((response) => response.json())
