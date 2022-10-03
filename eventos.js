@@ -8,6 +8,7 @@ function atualizarLista() {
         lista.forEach(function (cadaItem){
             tabela_compras.innerHTML += `
             <tr>
+                <td><input data-check="acao" type="checkbox"></td>
                 <td>${cadaItem.id}</td>
                 <td>${cadaItem.item}</td>
                 <td>${cadaItem.quantidade}</td>
@@ -22,6 +23,12 @@ function atualizarLista() {
             </tr>`
         });
     })
+}
+function marcarTodos(){
+    let todos = document.querySelectorAll('[data-check="acao"]');
+    todos.forEach((cadaCheck) => {
+        cadaCheck.checked = true;
+    });
 }
 async function excluir (id) {
     let resposta = confirm('Está certo disso?');
@@ -97,4 +104,5 @@ async function editar(){
         });
     atualizarLista();
 }
+
 atualizarLista();
