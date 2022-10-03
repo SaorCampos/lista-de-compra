@@ -24,6 +24,12 @@ function atualizarLista() {
         });
     })
 }
+function marcarTodos(){
+    let todos = document.querySelectorAll('[data-check="acao"]');
+    todos.forEach((cadaCheck) => {
+        cadaCheck.checked = true;
+    });
+}
 async function excluir (id) {
     let resposta = confirm('Está certo disso?');
     if(resposta !== true){
@@ -97,12 +103,6 @@ async function editar(){
         console.error('Error:', error);
         });
     atualizarLista();
-}
-function marcarTodos(){
-    let todos = document.querySelectorAll('[data-check="acao"]');
-    todos.forEach((cadaCheck) => {
-        cadaCheck.checked = true;
-    });
 }
 
 atualizarLista();
