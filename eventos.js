@@ -41,6 +41,10 @@ function criar(){
         item: document.getElementById('input_produto').value,
         quantidade: document.getElementById('input_quantidade').value,
     }
+    if(item.trim() ==="" || quantidade.trim() ===""){
+        alert('Preencha todos os campos');
+        return;
+    }
     fetch('http://localhost:8000/compras', {
         method: 'POST',
         headers: {
